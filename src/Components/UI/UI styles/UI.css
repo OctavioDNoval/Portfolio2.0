@@ -1,0 +1,9 @@
+/*-----------------------------------NAME PLATE STYLES-----------------------------------*/
+
+.name-plate{
+    flex-direction: row;
+}
+
+.name-capital{
+    background-color: rgb(48, 140, 227);
+}

@@ -1,10 +1,12 @@
 import React from "react";
 import { NamePlate } from "./UI/NamePlate";
+import { NavBar } from "./UI/NavBar";
 
 export const HeaderComponent = ({ name, lastname }) => {
 	return (
-		<nav>
+		<header>
 			<NamePlate name={name} lastname={lastname} />
-		</nav>
+			<NavBar />
+		</header>
 	);
 };

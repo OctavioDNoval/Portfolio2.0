@@ -1,9 +1,46 @@
 /*-----------------------------------NAME PLATE STYLES-----------------------------------*/
 
 .name-plate{
-    flex-direction: row;
+    /*flex-direction: row;*/
+    display: flex;
+    /*border: 1px solid black;*/
+    width: 200px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 900;
+    font-size: 18px;
+    color: rgb(48, 140, 227);;
 }
 
 .name-capital{
     background-color: rgb(48, 140, 227);
+    height: 64%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+}
+
+/*-----------------------------------NAV BAR STYLES-----------------------------------*/
+
+.navBar{
+    height: 100%;
+}
+
+.navBar-list{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+}
+
+.navBar-list_item{
+    list-style-type: none;
+    font-weight: 600;
 }

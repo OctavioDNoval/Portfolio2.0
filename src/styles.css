@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+
+/*---------------------------HEADER COMPONENT---------------------------*/
+header{
+    width: 100%;
+    /*border: 1px solid blue;*/
+    height: 64px;
+    display: flex;
+    justify-content: space-around;
+}

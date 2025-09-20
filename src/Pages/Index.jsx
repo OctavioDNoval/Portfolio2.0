@@ -1,4 +1,5 @@
 import { ContactComponent } from "../Components/ContactComponent";
+import { FooterComponnet } from "../Components/FooterComponnet";
 import { HeaderComponent } from "../Components/HeaderComponent";
 import { HomeComponent } from "../Components/HomeComponent";
 import { ProjectsComponents } from "../Components/ProjectsComponents";
@@ -16,6 +17,7 @@ export const Index = () => {
 				<ProjectsComponents />
 				<SkillsComponent />
 				<ContactComponent />
+				<FooterComponnet name={name} lastname={lastname} />
 			</main>
 		</div>
 	);

@@ -1,4 +1,3 @@
-import React from "react";
 import { NamePlate } from "./UI/NamePlate";
 import { NavBar } from "./UI/NavBar";
 

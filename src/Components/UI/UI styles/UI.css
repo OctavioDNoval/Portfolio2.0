@@ -1,3 +1,7 @@
+:root{
+    --primary-color : rgb(48, 140, 227);
+}
+
 /*-----------------------------------NAME PLATE STYLES-----------------------------------*/
 
 .name-plate{
@@ -11,11 +15,11 @@
     gap: 8px;
     font-weight: 900;
     font-size: 18px;
-    color: rgb(48, 140, 227);;
+    color: var(--primary-color);
 }
 
 .name-capital{
-    background-color: rgb(48, 140, 227);
+    background-color: var(--primary-color);
     height: 64%;
     aspect-ratio: 1/1;
     display: flex;
@@ -43,4 +47,15 @@
 .navBar-list_item{
     list-style-type: none;
     font-weight: 600;
+    color: white;
+    padding: 8px;
+    border-radius: 16px;
+    transition: all 0.2s ease-in;
+    user-select:none;
+}
+
+.navBar-list_item:hover{
+    background-color: white;
+    color: var(--primary-color);
+    transform: rotate(3deg);
 }

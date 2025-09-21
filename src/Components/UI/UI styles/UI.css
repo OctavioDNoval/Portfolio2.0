@@ -1,5 +1,7 @@
 :root{
     --primary-color : rgb(48, 140, 227);
+    --alt-color: rgb(57, 73, 143);
+    --alt-color-opacity : rgba(57, 73, 143, 0.6)
 }
 
 /*-----------------------------------NAME PLATE STYLES-----------------------------------*/

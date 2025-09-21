@@ -7,11 +7,13 @@ export const HomeComponent = ({ name, lastname }) => {
 			<div className="home-container">
 				<div className="home-img-container">
 					<div className="img-container">
-						<img src="" alt="" />
+						<img src="../Public/images/profile-pic.webp" alt="Profile Pic" />
 					</div>
 				</div>
-				<div className="home-info-contanier">
-					<h1 className="name">{name.concat(" ").concat(lastname)}</h1>
+				<div className="home-info-container">
+					<h1 className="home-info-name">
+						{name.concat(" ").concat(lastname)}
+					</h1>
 					<h2 className="name-info">Desarrollador Full Stack</h2>
 					<p className="desc">
 						Soy estudiante de la T.U.P. (Tecnicatura Universitaria en
@@ -19,16 +21,18 @@ export const HomeComponent = ({ name, lastname }) => {
 						desempeño en proyectos con el uso de tecnologías como C, Java, SQL,
 						HTML, CSS y JavaScript.
 						<br />
-						Destaco el trabajo en equipo en todos los proyectos realizados.
+						<span>
+							Destaco el trabajo en equipo en todos los proyectos realizados.
+						</span>
 					</p>
 					<p className="extra-text">excepto por este :)</p>
 					<div className="home-info-buttons">
 						<button type="button" className="info-btn contact-btn">
-							<Mail />
+							<Mail size={32} />
 							<p className="info-btn-text">Contactar Ahora</p>
 						</button>
 						<button type="button" className="info-btn cv-btn">
-							<Download />
+							<Download size={32} />
 							<p className="info-btn-text">Descargar CV</p>
 						</button>
 					</div>

@@ -4,14 +4,20 @@ export const SocialPlate = () => {
 	return (
 		<>
 			<div className="social-media-section">
-				<a href="https://github.com/OctavioDNoval">
-					<Github />
+				<a
+					href="https://github.com/OctavioDNoval"
+					className="social-icon-container"
+				>
+					<Github size={24} color="white" />
 				</a>
-				<a href="https://www.linkedin.com/in/octavio-noval-ab159230b/">
-					<Linkedin />
+				<a
+					href="https://www.linkedin.com/in/octavio-noval-ab159230b/"
+					className="social-icon-container"
+				>
+					<Linkedin size={24} color="white" />
 				</a>
-				<a href="">
-					<Mail />
+				<a href="" className="social-icon-container">
+					<Mail size={24} color="white" />
 				</a>
 			</div>
 		</>

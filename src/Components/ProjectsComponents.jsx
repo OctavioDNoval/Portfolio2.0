@@ -6,7 +6,7 @@ export const ProjectsComponents = () => {
 			id: 1,
 			title: "Trabajo final progra III",
 			techStack: ["Java", "JSON"],
-			image: "",
+			image: "../Public/images/Projects/utn-mdp.webp",
 			gitUrl: "https://github.com/OctavioDNoval/TP_FINAL",
 			liveUrl: "",
 			desc: "Trabajo final para la materia laboratorio III de la facultad, un sistema de gestion de inventario en Java",
@@ -15,7 +15,7 @@ export const ProjectsComponents = () => {
 			id: 2,
 			title: "Top Deck Importados Landing",
 			techStack: ["HTML", "CSS", "JavaScript", "Netlify"],
-			image: "",
+			image: "../Public/images/Projects/top-deck.webp",
 			gitUrl: "https://github.com/OctavioDNoval/TopDeck",
 			liveUrl: "https://topdeckimportados.netlify.app/",
 			desc: "Una landing para el emprendimiento de ventas de cartas de pokemon, con JS que da dinamismo, pero no maneja pagos",
@@ -24,7 +24,7 @@ export const ProjectsComponents = () => {
 			id: 3,
 			title: "Roca Sur Landing",
 			techStack: ["HTML", "CSS", "JavaScript", "Hostinger"],
-			image: "",
+			image: "../Public/images/Projects/rocasur.webp",
 			gitUrl: "https://github.com/OctavioDNoval/RocaSurLandingPageV2",
 			liveUrl: "https://rocasur1.com.ar/mangueras-pozo/index.html",
 			desc: "Landing page para la empresa de Roca Sur en la venta de mangueras Oro Flex",
@@ -59,7 +59,7 @@ export const ProjectsComponents = () => {
 	];
 
 	return (
-		<section className="section">
+		<section id="projects" className="section">
 			<div className="section-title-container">
 				<h2 className="section-title">Proyectos Destacados</h2>
 			</div>

@@ -4,7 +4,7 @@ export const SkillsComponent = () => {
 	const skills = [
 		{
 			id: 1,
-			title: "FrontEnd",
+			title: "💻 FrontEnd",
 			stack: [
 				"HTML",
 				"CSS",
@@ -16,18 +16,18 @@ export const SkillsComponent = () => {
 		},
 		{
 			id: 2,
-			title: "BackEnd",
+			title: "📃 BackEnd",
 			stack: ["Java", "SpringBoot", "API REST", "Python"],
 		},
 		{
 			id: 3,
-			title: "Bases de datos",
+			title: "📊 Bases de datos",
 			stack: ["SQL", "MySQL", "SQLite", "Firebase", "NoSQL"],
 		},
 	];
 
 	return (
-		<section className="section">
+		<section id="skills" className="section">
 			<div className="section-title-container">
 				<h2 className="section-title">Stack Tecnologico</h2>
 			</div>

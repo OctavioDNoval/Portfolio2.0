@@ -4,7 +4,7 @@ import { SocialPlate } from "./UI/SocialPlate";
 
 export const ContactComponent = () => {
 	return (
-		<section className="section">
+		<section id="contact" className="section">
 			<div className="section-title-container">
 				<h2 className="section-title">Contactame!</h2>
 			</div>
@@ -12,7 +12,7 @@ export const ContactComponent = () => {
 				<div className="form-container">
 					<div className="form-title-container">
 						<div className="form-title-icon">
-							<Send />
+							<Send color="white" size={28} />
 						</div>
 						<h3 className="form-title">Enviame un mensaje</h3>
 					</div>

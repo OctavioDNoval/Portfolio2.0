@@ -75,6 +75,11 @@ button {
     align-items: center;
     gap: 24px;
     margin: 0;
+    font-size: 1.4rem;
+}
+
+.navBar-list a{
+    text-decoration: none;
 }
 
 .navBar-list_item{
@@ -85,6 +90,15 @@ button {
     border-radius: 16px;
     transition: all 0.2s ease-in;
     user-select:none;
+    transition: all 0.4s ease-out;
+}
+
+.navBar-list_item.active{
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+    font-weight: 800;
+    color: var(--primary-color);
 }
 
 .navBar-list_item:hover{

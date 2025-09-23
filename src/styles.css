@@ -405,6 +405,147 @@ header{
     outline: 3px solid var(--primary-color);
 }
 
+/*---------------------------FOOTER COMPONENT---------------------------*/
+
+.footer{
+    background-color: var(--background-card-color);
+    margin-top: 96px;
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 90%;
+    gap: 32px;
+}
+
+.footer-main{
+    display: flex;
+    justify-content: space-around;
+    flex: 2;
+    gap: 40px;
+    
+}
+
+.footer-main > *{
+    flex: 1;
+}
+
+.footer-personal-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 16px;
+}
+
+.footer-personal-info .name-plate{
+    justify-content: start;
+}
+
+.footer-personal-info .name-plate>.name-capital{
+    border-radius: 12px;
+}
+
+.footer-personal-desc{
+    font-size: 1.6rem;
+    color: rgb(124, 124, 124);
+    font-weight: 600;
+}
+
+.footer-fast-nav{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+}
+
+.footer-fast-nav> h4{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 1.9rem;
+}
+
+.footer-fast-nav > ul{
+    flex: 7;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer-fast-nav a{
+    color: rgb(124, 124, 124);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-contact-a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer-contact-a h4{
+    font-weight: 900;
+    font-size: 1.9rem;
+}
+
+.footer-contact-a p{
+    font-weight: 600;
+    color: rgb(124, 124, 124);
+    font-size: 1.6rem;
+}
+
+.footer-contact-a a{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    background-color: var(--primary-color);
+    border-radius: 16px;
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-contact-a a p{
+    color: white;
+}
+
+.footer-copy{
+    flex: 1;
+    border-top: 2px solid rgb(124, 124, 124);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-copy p{
+    color: rgb(124, 124, 124);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.footer-copy a{
+    height: 50px;
+    aspect-ratio: 1/1;
+    box-shadow: 0 0 20px 3px var(--alt-color-opacity);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
 /*---------------------------KEYFRAMES---------------------------*/
 
 @keyframes breathe {

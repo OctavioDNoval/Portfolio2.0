@@ -8,8 +8,8 @@ export const ContactComponent = () => {
 			<div className="section-title-container">
 				<h2 className="section-title">Contactame!</h2>
 			</div>
-			<div className="contact-cards-section">
-				<div className="form-container">
+			<div className="contact-cards-section ">
+				<div className="form-container card-hover">
 					<div className="form-title-container">
 						<div className="form-title-icon">
 							<Send color="white" size={28} />
@@ -19,7 +19,7 @@ export const ContactComponent = () => {
 					<ContactForm />
 				</div>
 				<div className="contact-cards">
-					<div className="contact-info-card">
+					<div className="contact-info-card card-hover">
 						<h3 className="contact-info-title">Info. de Contacto</h3>
 						<ul className="contact-info-list">
 							<li className="contact-info-list-items">
@@ -53,12 +53,13 @@ export const ContactComponent = () => {
 							</li>
 						</ul>
 					</div>
-					<div className="social-card">
+					<div className="social-card card-hover">
 						<h3 className="contact-info-title">Sigueme en redes</h3>
 						<SocialPlate />
 					</div>
 
-					<div className="disponibility-card">
+					<div className="disponibility-card card-hover">
+						<div className="status-dot"></div>
 						<h4>Disponible para nuevos proyectos</h4>
 						<p>Actualmente acepto nuevos proyectos y colaboraciones</p>
 					</div>

@@ -47,8 +47,10 @@ export const ContactForm = () => {
 				</div>
 
 				<button type="submit" className="form-submit-btn">
-					<Send />
-					Enviar Mensaje
+					<div className="submit-content">
+						<Send />
+						Enviar Mensaje
+					</div>
 				</button>
 			</form>
 		</>

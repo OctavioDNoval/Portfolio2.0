@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const NavBar = () => {
+export const NavBar = ({ isOpen }) => {
 	const [activeSection, setActiveSection] = useState("");
 
 	useEffect(() => {
@@ -32,7 +32,7 @@ export const NavBar = () => {
 	};
 
 	return (
-		<nav className="navBar">
+		<nav className={isOpen ? "navBar open" : "navBar"}>
 			<ul className="navBar-list">
 				<a
 					href="#"

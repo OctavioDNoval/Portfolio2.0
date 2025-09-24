@@ -39,14 +39,14 @@ main{
 
 /*---------------------------HEADER COMPONENT---------------------------*/
 header{
-    width: 100%;
+    width: 100vw;
     /*border: 1px solid blue;*/
     height: 64px;
     display: flex;
     justify-content: space-around;
     position: fixed;
     top: 0;
-    z-index: 20;
+    z-index: 30;
     transition: all 0.5s ease;
 }
 
@@ -60,6 +60,12 @@ header{
     border-bottom: 2px, solid var(--border-grey-color);
 
     -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+@media screen and (max-width:760px){
+    header{
+        align-items: center;
+    }
 }
 
 /*---------------------------HOME COMPONENT---------------------------*/
@@ -201,6 +207,8 @@ header{
 .cv-btn:hover{
     transform: rotate(2deg);
 }
+
+
 
 /*---------------------------PROJECT COMPONENTS---------------------------*/
 

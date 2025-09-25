@@ -17,6 +17,13 @@ html{
     font-size: 62.5%;
 }
 
+
+@media screen and (max-width: 760px) {
+  html {
+    font-size: 55%; /* 1rem = 12px */
+  }
+}
+
 body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -31,6 +38,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 760px) {
+    .section-title{
+        padding: 0 16px;
+        text-align: center;
+    }
 }
 
 main{
@@ -57,7 +71,7 @@ header{
 .glass{
     background: rgba(15,15,15,0.4);
     backdrop-filter: blur(12px) saturate(180%);
-    border-bottom: 2px, solid var(--border-grey-color);
+    border-bottom: 2px solid var(--border-grey-color);
 
     -webkit-backdrop-filter: blur(12px) saturate(180%);
 }
@@ -65,6 +79,7 @@ header{
 @media screen and (max-width:760px){
     header{
         align-items: center;
+        z-index: 40;
     }
 }
 
@@ -208,7 +223,26 @@ header{
     transform: rotate(2deg);
 }
 
-
+@media screen and (max-width: 760px) {
+    .home-container{
+        width: 90%;
+        flex-direction: column;
+    }
+    .home-info-buttons{
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+    .info-btn{
+        width: 88%;
+    }
+    .home-img-container{
+        margin: 32px 0;
+    }
+    .home-info-container{
+        text-align: center;
+    }
+}
 
 /*---------------------------PROJECT COMPONENTS---------------------------*/
 
@@ -239,6 +273,12 @@ header{
     gap: 32px;
 }
 
+@media screen and (max-width: 760px) {
+    .projects-cards-container{
+        flex-direction: column;
+    }
+}
+
 /*---------------------------SKILLS COMPONENT---------------------------*/
 
 #skills{
@@ -251,6 +291,12 @@ header{
     width: 70%;
     gap: 32px;
     
+}
+
+@media screen and (max-width:760px) {
+    .skills-card-container{
+        flex-direction: column;
+    }
 }
 
 /*---------------------------CONTACT COMPONENT---------------------------*/
@@ -429,6 +475,12 @@ header{
 
 .card-hover:hover{
     outline: 3px solid var(--primary-color);
+}
+
+@media screen and (max-width: 760px){
+    .contact-cards-section{
+        flex-direction: column;
+    }
 }
 
 /*---------------------------FOOTER COMPONENT---------------------------*/

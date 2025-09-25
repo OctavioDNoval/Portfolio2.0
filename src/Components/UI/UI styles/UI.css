@@ -63,6 +63,15 @@ button {
     color: white;
 }
 
+@media screen and (max-width:760px){
+    .name-plate{
+        background-color: inherit;
+    }
+    .lucide-menu{
+        z-index: 20;
+    }
+}
+
 /*-----------------------------------NAV BAR STYLES-----------------------------------*/
 
 .navBar{
@@ -110,8 +119,8 @@ button {
 
 @media screen and (max-width : 760px) {
     .navBar{
-        position: absolute;
-        top: 0;
+        position: fixed;
+        /*top: -100%;*/
         height: auto;
         background-color: inherit;
         backdrop-filter: inherit;
@@ -120,10 +129,11 @@ button {
         transform: translateY(-100%);
         transition: all 0.5s ease-out;
         z-index: 10;
+        width: 100%;
     }
-
+    
     .navBar.open{
-        transform: translateY(calc(0px + 64px));
+        top: 64px;
     }
 
     .navBar-list{
@@ -274,6 +284,16 @@ button {
     transform: rotate(2deg) scale(1.1);
 }
 
+@media screen and (max-width: 760px) {
+    .project-card{
+        min-width: 100%;
+        flex: 1 1 100%;
+    }
+    .card-tech-stack-container{
+        flex-wrap: wrap;
+    }
+}
+
 /*-----------------------------------SKILL CARDS STYLES-----------------------------------*/
 
 .skill-card{
@@ -324,6 +344,17 @@ button {
     transform: scale(1.1) rotate(2deg);
     box-shadow: 0 0 20px 1px var(--primary-color);
     color: var(--primary-color);
+}
+
+@media screen and (max-width:760px){
+    .skill-card{
+        min-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .skill-card-list{
+        justify-content: center;
+    }
 }
 
 /*-----------------------------------CONTACT FORM STYLES-----------------------------------*/

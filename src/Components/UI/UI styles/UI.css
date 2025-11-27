@@ -281,6 +281,12 @@ button {
     min-height: 44px; 
 }
 
+.card-a.disabled:hover{
+    cursor:not-allowed;
+    background-color: grey;
+    border: none;
+}
+
 .card-github{
     background-color: black;
     transition: all 0.2s ease-out;

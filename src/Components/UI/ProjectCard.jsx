@@ -8,6 +8,8 @@ export const ProjectCard = ({
 	liveUrl,
 	desc,
 }) => {
+	const hasLiveUrl = liveUrl && liveUrl.trim() !== "";
+
 	return (
 		<article className="project-card">
 			<div className="card-img-container">
@@ -28,7 +30,11 @@ export const ProjectCard = ({
 						<Github size={24} />
 						GitHub
 					</a>
-					<a href={liveUrl} className="card-a card-link">
+					<a
+						href={hasLiveUrl ? liveUrl : ""}
+						className={`card-a card-link ${hasLiveUrl ? "" : "disabled"}`}
+						onClick={hasLiveUrl ? "" : (e) => e.preventDefault()}
+					>
 						<Link size={24} />
 						Link
 					</a>

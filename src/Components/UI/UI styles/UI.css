@@ -167,15 +167,18 @@ button {
 
 /*-----------------------------------PROJECT CARDS STYLES-----------------------------------*/
 
-.project-card{
+.project-card {
     outline: 2px solid var(--alt-color-opacity);
-    height: 55vh;
+    height: auto; 
+    min-height: 400px; 
     flex: 1 1 calc(33.3% - 32px);
     max-width: calc(33.3% - 32px);
     border-radius: 24px;
     overflow: hidden;
     background-color: var(--background-card-color);
     transition: all 0.2s ease-out;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover{
@@ -192,17 +195,19 @@ button {
     transform: scale(1.15);
 }
 
-.card-info{
+.card-info {
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 16px 16px 0 16px;
+    flex: 1; 
 }
 
-.card-img-container{
-    /*border: 1px solid black;*/
-    height: 40%;
+.card-img-container {
+    height: 200px; 
+    min-height: 200px;
     overflow: hidden;
+    flex-shrink: 0; 
 }
 
 .card-img{
@@ -213,30 +218,36 @@ button {
     transition: all 0.2s ease-out;
 }
 
-.card-title{
-    font-size: 2.4rem;
+.card-title {
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem); 
     color: white;
     transition: all 0.2s ease-out;
+    line-height: 1.2;
 }
 
-.card-desc{
-    color: rgb(124, 124, 124);;
-    font-size: 1.6rem;
+.card-desc {
+    color: rgb(124, 124, 124);
+    font-size: clamp(1.4rem, 1.8vw, 1.6rem); 
+    line-height: 1.4;
+    flex: 1; /
 }
 
-.card-tech-stack-container{
+.card-tech-stack-container {
     display: flex;
     gap: 8px;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.2vw, 1.2rem); 
+    flex-wrap: wrap; 
 }
 
-.card-tech{
+.card-tech {
     border: 2px solid var(--alt-color-opacity);
     background-color: black;
     color: white;
     font-weight: 600;
     padding: 4px 12px;
     transition: all 0.2s ease-out;
+    border-radius: 6px;
+    white-space: nowrap; 
 }
 
 .card-tech:hover{
@@ -245,25 +256,29 @@ button {
     border: 2px solid var(--primary-color);
 }
 
-.card-a-container{
+.card-a-container {
     padding: 12px 0;
     display: flex;
     justify-content: space-around;
+    gap: 8px;
+    flex-shrink: 0; 
 }
 
-.card-a{
+.card-a {
     border: 1px solid var(--alt-color-opacity);
-    padding: 6px 16px;
+    padding: 8px 12px;
     width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 12px;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 1.4vw, 1.6rem);
     font-weight: 600;
     border-radius: 12px;
     color: white;
+    text-align: center;
+    min-height: 44px; 
 }
 
 .card-github{
@@ -284,13 +299,40 @@ button {
     transform: rotate(2deg) scale(1.1);
 }
 
-@media screen and (max-width: 760px) {
-    .project-card{
+
+@media screen and (max-width: 1024px) {
+    .project-card {
+        flex: 1 1 calc(50% - 24px);
+        max-width: calc(50% - 24px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-card {
         min-width: 100%;
         flex: 1 1 100%;
+        max-width: 100%;
+        min-height: 350px;
     }
-    .card-tech-stack-container{
-        flex-wrap: wrap;
+    
+    .card-img-container {
+        height: 180px;
+        min-height: 180px;
+    }
+    
+    .card-info {
+        padding: 12px 12px 0 12px;
+        gap: 12px;
+    }
+    
+    .card-a-container {
+        padding: 8px 0;
+    }
+    
+    .card-a {
+        padding: 6px 10px;
+        gap: 8px;
+        font-size: 1.4rem;
     }
 }
 

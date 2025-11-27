@@ -7,7 +7,7 @@ export const HomeComponent = ({ name, lastname }) => {
 			<div className="home-container">
 				<div className="home-img-container">
 					<div className="img-container">
-						<img src="../images/profile-pic.webp" alt="Profile Pic" />
+						<img src="/images/profile-pic.webp" alt="Profile Pic" />
 					</div>
 				</div>
 				<div className="home-info-container">

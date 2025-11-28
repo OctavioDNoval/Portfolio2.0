@@ -16,7 +16,7 @@ export const SocialPlate = () => {
 				>
 					<Linkedin size={24} color="white" />
 				</a>
-				<a href="" className="social-icon-container">
+				<a href="#contact" className="social-icon-container">
 					<Mail size={24} color="white" />
 				</a>
 			</div>

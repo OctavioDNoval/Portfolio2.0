@@ -27,14 +27,18 @@ export const HomeComponent = ({ name, lastname }) => {
 					</p>
 					<p className="extra-text">excepto por este :)</p>
 					<div className="home-info-buttons">
-						<button type="button" className="info-btn contact-btn">
+						<a href="#contact" className="info-btn contact-btn">
 							<Mail size={32} />
 							<p className="info-btn-text">Contactar Ahora</p>
-						</button>
-						<button type="button" className="info-btn cv-btn">
+						</a>
+						<a
+							href="/files/Octavio_Noval_CV_English"
+							download
+							className="info-btn cv-btn"
+						>
 							<Download size={32} />
 							<p className="info-btn-text">Descargar CV</p>
-						</button>
+						</a>
 					</div>
 					<SocialPlate />
 				</div>

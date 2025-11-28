@@ -21,16 +21,16 @@ export const FooterComponnet = ({ name, lastname }) => {
 						<h4>Navegacion Rapida</h4>
 						<ul>
 							<li>
-								<a href="">Inicio</a>
+								<a href="#">Inicio</a>
 							</li>
 							<li>
-								<a href="">Proyectos</a>
+								<a href="#projects">Proyectos</a>
 							</li>
 							<li>
-								<a href="">Habilidades</a>
+								<a href="#skills">Habilidades</a>
 							</li>
 							<li>
-								<a href="">Contacto</a>
+								<a href="#concat">Contacto</a>
 							</li>
 						</ul>
 					</div>
@@ -40,7 +40,7 @@ export const FooterComponnet = ({ name, lastname }) => {
 							Siempre abierto a nuevas oportunidades y colaboraciones
 							interesantes.
 						</p>
-						<a href="">
+						<a href="#concat">
 							<Mail />
 							<p>Iniciar conversacion</p>
 						</a>
@@ -49,7 +49,7 @@ export const FooterComponnet = ({ name, lastname }) => {
 
 				<div className="footer-copy">
 					<p>© 2025 Octavio Noval. Hecho con React.js & JavaScript</p>
-					<a href="">
+					<a href="#">
 						<ArrowBigUp />
 					</a>
 				</div>

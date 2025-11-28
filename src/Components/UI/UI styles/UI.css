@@ -64,9 +64,7 @@ button {
 }
 
 @media screen and (max-width:760px){
-    .name-plate .name {
-		display: none;
-	}
+    
 
 	.name-plate .name-capital {
 		height: 45px;

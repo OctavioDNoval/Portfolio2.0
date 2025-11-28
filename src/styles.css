@@ -790,6 +790,14 @@ header{
         order: -1; /* Flecha arriba del texto */
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+	header,
+	.navBar,
+	.navBar-list_item {
+		transition: none;
+	}
+}
 /*---------------------------KEYFRAMES---------------------------*/
 
 @keyframes breathe {

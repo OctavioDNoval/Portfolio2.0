@@ -64,12 +64,15 @@ button {
 }
 
 @media screen and (max-width:760px){
-    .name-plate {
-		width: auto;
+    .name-plate .name {
+		display: none;
 	}
-    .lucide-menu{
-        z-index: 20;
-    }
+
+	.name-plate .name-capital {
+		height: 45px;
+		width: 45px;
+		font-size: 18px;
+	}
 }
 
 /*-----------------------------------NAV BAR STYLES-----------------------------------*/

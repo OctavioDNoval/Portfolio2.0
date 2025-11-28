@@ -32,7 +32,7 @@ export const ProjectsComponents = () => {
 		{
 			id: 4,
 			title: "Entrega Final CoderHouse",
-			techStack: ["React Native", "RKT Query", "Firebase", "Redux"],
+			techStack: ["React Native", "RKT Query", "Firebase", "Redux", "SQLite"],
 			image: "/images/Projects/coderhouse.webp",
 			gitUrl: "https://github.com/OctavioDNoval/EntregaFinalCoderHouse",
 			liveUrl: "",

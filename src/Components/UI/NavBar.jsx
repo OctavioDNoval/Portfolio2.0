@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const NavBar = ({ isOpen }) => {
+export const NavBar = ({ isOpen, onClose }) => {
 	const [activeSection, setActiveSection] = useState("");
 
 	useEffect(() => {
@@ -11,7 +11,6 @@ export const NavBar = ({ isOpen }) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						setActiveSection(entry.target.id);
-						console.log(activeSection);
 					}
 				});
 			},
@@ -23,22 +22,27 @@ export const NavBar = ({ isOpen }) => {
 		sections.forEach((sec) => observer.observe(sec));
 
 		return () => observer.disconnect();
-	}, [activeSection]);
+	}, []);
 
 	const handleScroll = (e, id) => {
 		e.preventDefault();
 		const section = document.getElementById(id);
 		section?.scrollIntoView({ behavior: "smooth" });
+
+		if (onClose) {
+			onClose();
+		}
 	};
 
 	return (
-		<nav className={isOpen ? "navBar open" : "navBar"}>
+		<nav className={`navBar ${isOpen ? "open" : ""}`}>
 			<ul className="navBar-list">
 				<a
 					href="#"
 					onClick={(e) => {
 						e.preventDefault();
 						window.scrollTo({ top: 0, behavior: "smooth" });
+						if (onClose) onClose();
 					}}
 				>
 					<li className="navBar-list_item">Inicio</li>
@@ -58,7 +62,6 @@ export const NavBar = ({ isOpen }) => {
 							activeSection === "projects" ? "active" : ""
 						}`}
 					>
-						{" "}
 						Proyectos
 					</li>
 				</a>

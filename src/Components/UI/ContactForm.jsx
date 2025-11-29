@@ -1,8 +1,19 @@
 import { useForm } from "@formspree/react";
 import { Send } from "lucide-react";
+import { useEffect } from "react";
 
 export const ContactForm = () => {
 	const [state, handleSubmit] = useForm("mdkrbgnp");
+
+	useEffect(() => {
+		if (state.succeeded) {
+			const timer = setTimeout(() => {
+				window.location.reload();
+			}, 2000);
+
+			return () => clearTimeout(timer);
+		}
+	}, [state.succeeded]);
 
 	return (
 		<>
@@ -55,12 +66,16 @@ export const ContactForm = () => {
 
 				<button
 					type="submit"
-					className="form-submit-btn"
+					className={`form-submit-btn ${state.succeeded ? "succeeded" : ""}`}
 					disabled={state.submitting}
 				>
 					<div className="submit-content">
 						<Send />
-						{state.submitting ? "Enviando..." : "Enviar Mensaje"}
+						{state.submitting
+							? "Enviando..."
+							: state.succeeded
+							? "Enviado"
+							: "Enviar Mensaje"}
 					</div>
 				</button>
 			</form>

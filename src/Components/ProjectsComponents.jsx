@@ -62,6 +62,15 @@ export const ProjectsComponents = () => {
 			liveUrl: "",
 			desc: "API REST con autenticacion, CRUD completo",
 		},
+		{
+			id: 9,
+			title: "M3 Almacenamiento System",
+			techStack: ["Java","JWT", "Spring Boot","MapStruct","Email", "Hibernate", "MySQL"],
+			image: "/images/Projects/m3almacenamiento.webp",
+			gitUrl: "https://github.com/OctavioDNoval/M3Almacenamiento-api",
+			liveUrl: "",
+			desc: "Sistema de automatizacion de deudas, asignacion de clientes a productos, recordatorios via mail a clientes, etc.",
+		},
 	];
 
 	return (

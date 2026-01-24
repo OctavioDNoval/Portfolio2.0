@@ -32,7 +32,7 @@ export const HomeComponent = ({ name, lastname }) => {
 							<p className="info-btn-text">Contactar Ahora</p>
 						</a>
 						<a
-							href="/files/Octavio_Noval_CV_English"
+							href="/files/Octavio_Noval_CV_English.pdf"
 							download
 							className="info-btn cv-btn"
 						>

@@ -35,11 +35,14 @@ body{
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
-    position: relative;
+}
+
+#root {
+    overflow-x: hidden;
 }
 
 .section{
-    max-width: 100vw;
+    width: 100%;
     min-height: calc(100vh - 64px);
     /*border: 1px solid black;*/
     display: flex;
@@ -798,13 +801,157 @@ header{
     }
 }
 
+/*---------------------------SCROLL REVEAL ANIMATIONS---------------------------*/
+
+[data-reveal] {
+	opacity: 0;
+}
+
+[data-reveal].reveal-visible {
+	animation: reveal-up 0.8s ease-out forwards;
+}
+
+[data-reveal="down"].reveal-visible {
+	animation-name: reveal-down;
+}
+
+[data-reveal="left"].reveal-visible {
+	animation-name: reveal-left;
+}
+
+[data-reveal="right"].reveal-visible {
+	animation-name: reveal-right;
+}
+
+[data-reveal="scale"].reveal-visible {
+	animation-name: reveal-scale;
+}
+
+@keyframes reveal-up {
+	from {
+		opacity: 0;
+		transform: translateY(60px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes reveal-down {
+	from {
+		opacity: 0;
+		transform: translateY(-60px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes reveal-left {
+	from {
+		opacity: 0;
+		transform: translateX(-60px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes reveal-right {
+	from {
+		opacity: 0;
+		transform: translateX(60px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes reveal-scale {
+	from {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 760px) {
+	@keyframes reveal-up {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes reveal-down {
+		from {
+			opacity: 0;
+			transform: translateY(-30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes reveal-left {
+		from {
+			opacity: 0;
+			transform: translateX(-30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes reveal-right {
+		from {
+			opacity: 0;
+			transform: translateX(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes reveal-scale {
+		from {
+			opacity: 0;
+			transform: scale(0.9);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	header,
 	.navBar,
 	.navBar-list_item {
 		transition: none;
 	}
+
+	[data-reveal] {
+		opacity: 1;
+		animation: none;
+	}
 }
+
 /*---------------------------KEYFRAMES---------------------------*/
 
 @keyframes breathe {

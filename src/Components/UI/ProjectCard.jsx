@@ -7,11 +7,12 @@ export const ProjectCard = ({
 	gitUrl,
 	liveUrl,
 	desc,
+	...props
 }) => {
 	const hasLiveUrl = liveUrl && liveUrl.trim() !== "";
 
 	return (
-		<article className="project-card">
+		<article className={`project-card ${props.className || ""}`} data-reveal={props["data-reveal"] || undefined} style={props.style || undefined}>
 			<div className="card-img-container">
 				<img src={image} alt={title} className="card-img" />
 			</div>

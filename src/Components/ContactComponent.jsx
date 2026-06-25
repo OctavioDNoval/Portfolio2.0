@@ -5,11 +5,11 @@ import { SocialPlate } from "./UI/SocialPlate";
 export const ContactComponent = () => {
 	return (
 		<section id="contact" className="section">
-			<div className="section-title-container">
+			<div className="section-title-container" data-reveal="up">
 				<h2 className="section-title">Contactame!</h2>
 			</div>
 			<div className="contact-cards-section ">
-				<div className="form-container card-hover">
+				<div className="form-container card-hover" data-reveal="left">
 					<div className="form-title-container">
 						<div className="form-title-icon">
 							<Send color="white" size={28} />
@@ -18,7 +18,7 @@ export const ContactComponent = () => {
 					</div>
 					<ContactForm />
 				</div>
-				<div className="contact-cards">
+				<div className="contact-cards" data-reveal="right" style={{ transitionDelay: "0.2s" }}>
 					<div className="contact-info-card card-hover">
 						<h3 className="contact-info-title">Info. de Contacto</h3>
 						<ul className="contact-info-list">

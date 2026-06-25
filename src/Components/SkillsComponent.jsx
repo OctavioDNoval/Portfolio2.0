@@ -28,12 +28,18 @@ export const SkillsComponent = () => {
 
 	return (
 		<section id="skills" className="section">
-			<div className="section-title-container">
+			<div className="section-title-container" data-reveal="up">
 				<h2 className="section-title">Stack Tecnologico</h2>
 			</div>
 			<div className="skills-card-container">
-				{skills.map((s) => (
-					<SkillCard title={s.title} stack={s.stack} />
+				{skills.map((s, i) => (
+					<SkillCard
+						key={s.id}
+						data-reveal="up"
+						style={{ transitionDelay: `${i * 0.15}s` }}
+						title={s.title}
+						stack={s.stack}
+					/>
 				))}
 			</div>
 		</section>

@@ -84,13 +84,15 @@ export const ProjectsComponents = () => {
 
 	return (
 		<section id="projects" className="section">
-			<div className="section-title-container">
+			<div className="section-title-container" data-reveal="up">
 				<h2 className="section-title">Proyectos Destacados</h2>
 			</div>
 			<div className="projects-cards-container">
-				{projects.map((p) => (
+				{projects.map((p, i) => (
 					<ProjectCard
 						key={p.id}
+						data-reveal="up"
+						style={{ transitionDelay: `${i * 0.1}s` }}
 						title={p.title}
 						techStack={p.techStack}
 						image={p.image}

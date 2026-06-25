@@ -5,7 +5,7 @@ import { SocialPlate } from "./UI/SocialPlate";
 export const FooterComponnet = ({ name, lastname }) => {
 	return (
 		<footer className="footer">
-			<div className="footer-wrapper">
+			<div className="footer-wrapper" data-reveal="up">
 				<div className="footer-main">
 					<div className="footer-personal-info">
 						<NamePlate name={name} lastname={lastname} />

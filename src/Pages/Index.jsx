@@ -4,10 +4,13 @@ import { HeaderComponent } from "../Components/HeaderComponent";
 import { HomeComponent } from "../Components/HomeComponent";
 import { ProjectsComponents } from "../Components/ProjectsComponents";
 import { SkillsComponent } from "../Components/SkillsComponent";
+import { useRevealObserver } from "../hooks/useRevealObserver";
 
 export const Index = () => {
 	const name = "Octavio";
 	const lastname = "Noval";
+
+	useRevealObserver();
 
 	return (
 		<div>

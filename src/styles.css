@@ -64,14 +64,21 @@ main{
 /*---------------------------HEADER COMPONENT---------------------------*/
 header{
     width: 100vw;
-    /*border: 1px solid blue;*/
     height: 64px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     position: fixed;
     top: 0;
     z-index: 30;
     transition: all 0.5s ease;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 64px;
+    flex-shrink: 0;
 }
 
 .solid{
@@ -82,15 +89,34 @@ header{
     background: rgba(15,15,15,0.4);
     backdrop-filter: blur(12px) saturate(180%);
     border-bottom: 2px solid var(--border-grey-color);
-
     -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+.scroll-progress {
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--alt-color));
+    transition: width 0.1s linear;
+    flex-shrink: 0;
+}
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 40;
+    padding: 8px;
 }
 
 @media screen and (max-width:760px){
 	header {
 		padding: 0 20px;
-		justify-content: space-between;
 	}
+    .header-inner {
+        justify-content: space-between;
+    }
 }
 
 /*---------------------------HOME COMPONENT---------------------------*/
@@ -953,6 +979,12 @@ header{
 }
 
 /*---------------------------KEYFRAMES---------------------------*/
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 @keyframes breathe {
     0%{

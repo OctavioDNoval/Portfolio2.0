@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const NavBar = ({ isOpen, onClose }) => {
-	const [activeSection, setActiveSection] = useState("");
+	const [activeSection, setActiveSection] = useState("inicio");
 
 	useEffect(() => {
 		const sections = document.querySelectorAll(".section");
@@ -15,7 +15,7 @@ export const NavBar = ({ isOpen, onClose }) => {
 				});
 			},
 			{
-				threshold: 0.6,
+				threshold: 0.4,
 			}
 		);
 
@@ -34,54 +34,30 @@ export const NavBar = ({ isOpen, onClose }) => {
 		}
 	};
 
+	const getItemClass = (sectionId) =>
+		`navBar-list_item ${activeSection === sectionId ? "active" : ""}`;
+
 	return (
 		<nav className={`navBar ${isOpen ? "open" : ""}`}>
 			<ul className="navBar-list">
 				<a
-					href="#"
+					href="#inicio"
 					onClick={(e) => {
 						e.preventDefault();
 						window.scrollTo({ top: 0, behavior: "smooth" });
 						if (onClose) onClose();
 					}}
 				>
-					<li className="navBar-list_item">Inicio</li>
-				</a>
-				<a href="#inicio" onClick={(e) => handleScroll(e, "inicio")}>
-					<li
-						className={`navBar-list_item ${
-							activeSection === "inicio" ? "active" : ""
-						}`}
-					>
-						Sobre mi
-					</li>
+					<li className={getItemClass("inicio")}>Inicio</li>
 				</a>
 				<a href="#projects" onClick={(e) => handleScroll(e, "projects")}>
-					<li
-						className={`navBar-list_item ${
-							activeSection === "projects" ? "active" : ""
-						}`}
-					>
-						Proyectos
-					</li>
+					<li className={getItemClass("projects")}>Proyectos</li>
 				</a>
 				<a href="#skills" onClick={(e) => handleScroll(e, "skills")}>
-					<li
-						className={`navBar-list_item ${
-							activeSection === "skills" ? "active" : ""
-						}`}
-					>
-						Habilidades
-					</li>
+					<li className={getItemClass("skills")}>Habilidades</li>
 				</a>
 				<a href="#contact" onClick={(e) => handleScroll(e, "contact")}>
-					<li
-						className={`navBar-list_item ${
-							activeSection === "contact" ? "active" : ""
-						}`}
-					>
-						Contacto
-					</li>
+					<li className={getItemClass("contact")}>Contacto</li>
 				</a>
 			</ul>
 		</nav>

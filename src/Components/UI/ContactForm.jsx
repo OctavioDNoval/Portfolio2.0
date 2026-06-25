@@ -1,5 +1,5 @@
 import { useForm } from "@formspree/react";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 import { useEffect } from "react";
 
 export const ContactForm = () => {
@@ -9,7 +9,7 @@ export const ContactForm = () => {
 		if (state.succeeded) {
 			const timer = setTimeout(() => {
 				window.location.reload();
-			}, 2000);
+			}, 3000);
 
 			return () => clearTimeout(timer);
 		}
@@ -70,11 +70,15 @@ export const ContactForm = () => {
 					disabled={state.submitting}
 				>
 					<div className="submit-content">
-						<Send />
+						{state.submitting ? (
+							<Loader2 className="spinner" size={24} />
+						) : (
+							<Send size={24} />
+						)}
 						{state.submitting
 							? "Enviando..."
 							: state.succeeded
-							? "Enviado"
+							? "Mensaje enviado"
 							: "Enviar Mensaje"}
 					</div>
 				</button>
